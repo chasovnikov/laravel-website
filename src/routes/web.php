@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('r')->group(function () {
-    Route::get('/', [IndexController::class, 'index'])->name('home');    
-});
+// Route::middleware('r')->group(function () {
+// });
+
+Route::get('/', [IndexController::class, 'index'])->name('home');  
+
+Route::get('/posts', [PostController::class, 'index'])->name('post.index');    
+
+Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');    

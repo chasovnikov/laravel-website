@@ -1,7 +1,23 @@
 # website-laravel9
 Учебный вебсайт на laravel 9 по урокам от "Просто о Laravel. CutCode"
 
-### Алгоритм разработки
+### Настройка готового проекта
+```bash
+composer install    # установка composer-зависимости (см. composer.json)
+npm install         # уст-ка npm-завис-ти (см. package.jsoon)
+npm run dev         # запуск команды из package.json: scripts: dev
+php artisan storage:link    # создать симлинк папки storage в папке public
+php artisan migrate --seed  # запуск миграций + создание тестовых данных
+
+# создать файл .env по примеру .env.example
+
+php artisan key:generate    # записывает APP_KEY в файле .env
+php artisan serve           # запуск встроенного сервера
+```
+проверить результат по url: http://localhost:8000
+
+
+## Алгоритм разработки
 
 ### Установка и первоначальная настройка
 - установка через composer (см. док.)
@@ -52,3 +68,6 @@ php artisan make:middleware GoogleRecaptcha
 php artisan make:controller IndexController
 ```
 - редактир. в src/routes/web.php роут под 'index'
+
+### Шаблонизатор Blade
+
