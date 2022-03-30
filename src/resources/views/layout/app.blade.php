@@ -6,12 +6,12 @@
 
     <title>@yield('title')</title>
 
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="/public/css/app.css" rel="stylesheet">
 </head>
 <body>
 
     @yield('content')
 
-    <script src="/js/app.js"></script>
+    <script src="/public/js/app.js"></script>
 </body>
 </html>
